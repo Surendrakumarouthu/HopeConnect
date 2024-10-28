@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carousel with Pagination</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .pagination-wrapper {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .pagination-btn {
+      cursor: pointer;
+      padding: 10px;
+      margin: 5px;
+      background-color: #007bff;
+      color: white;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Carousel -->
+<div id="carouselExample" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="hope logo.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="hope logo.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="hope logo.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+</div>
+
+<!-- Pagination -->
+<div class="pagination-wrapper">
+  <span class="pagination-btn" onclick="goToSlide(0)">1</span>
+  <span class="pagination-btn" onclick="goToSlide(1)">2</span>
+  <span class="pagination-btn" onclick="goToSlide(2)">3</span>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+  // Function to navigate to a specific slide
+  function goToSlide(index) {
+    $('#carouselExample').carousel(index);
+  }
+</script>
+
+</body>
+</html>
